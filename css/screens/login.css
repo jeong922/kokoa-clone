@@ -42,14 +42,18 @@
 }
 
 #login-form input:focus {
-  border-color: var(--blue);
+  border-color: var(--deep-dark-blue);
 }
 
 #login-form input[type="submit"] {
-  background-color: var(--blue);
+  background-color: var(--deep-dark-blue);
   cursor: pointer;
   padding: 20px 0px;
   border-radius: 5px;
+}
+
+#login-form input[value="Log In"] {
+  color: #fff;
 }
 
 #login-form a {
