@@ -3,4 +3,7 @@
   --dark-blue: rgb(63, 114, 175);
   --blue: rgb(219, 226, 239);
   --light-blue: rgb(249, 247, 247);
+
+  --horizontal-space: 25px;
+  --border-style: 1px solid rgb(17, 45, 78, 0.2);
 }
