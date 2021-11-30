@@ -1,0 +1,30 @@
+/* .icon-row {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.icon-row {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+
+.icon-row__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-row__icon i {
+  font-size: 30px;
+}
+
+.icon-row__icon span {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.icon-row__icon:hover {
+  cursor: pointer;
+}

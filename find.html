@@ -23,50 +23,70 @@
       </div>
     </div>
 
-		<header class="screen-header">
-			<h1 class="screen-header__title">Find</h1>
-			<div class="screen-header__icons">
-				<span><i class="fas fa-search fa-lg"></i></span>
-				<span><i class="fas fa-cog fa-lg"></i></span>
-			</div>
-		</header>
+    <header class="screen-header">
+      <h1 class="screen-header__title">Find</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span
+          ><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a
+        ></span>
+      </div>
+    </header>
 
     <main class="main-screen">
-      <div class="find-icons">
-				<div class="find-icons__icon"><i class="fas fa-qrcode"></i><span></span>QR Code</div>
-				<div class="find-icons__icon"><i class="far fa-address-book"></i><span></span>Add by Contacts</div>
-				<div class="find-icons__icon"><i class="fas fa-fingerprint"></i><span></span>Add by ID</div>
-				<div class="find-icons__icon"><i class="far fa-envelope"></i><span></span>Invite</div>
-			</div>
-			<div class="recommended-friends">
-				<h3 class="recommended-friends__title">Recommended Friends</h3>
-				<span>You have no Recommended friends</span>
-			</div>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="fas fa-qrcode"></i><span>QR Code</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-address-book"></i><span>Add by Contacts</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-fingerprint"></i><span>Add by ID</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-envelope"></i><span>Invite</span>
+        </div>
+      </div>
+      <div class="recommended-friends">
+        <h3 class="recommended-friends__title">Recommended Friends</h3>
+        <span>You have no Recommended friends</span>
+      </div>
 
-			<div class="open-chat">
-				<div class="open-chat__header">
-					<h4 class="open-chat__title">Open Chat</h4>
-					<span>Go to Openchat Home <i class="fas fa-chevron-right fa-xs"></i></span>
-				</div>
-				<div class="open-post">
-					<div class="open-post__column">
-						<h5 class="open-post__title">#춘식</h5>
-						<h6 class="open-post__hashtage">#춘식#choonsik#라이언❤#고구마❤</h6>
-						<div class="open-post__members">
-							<img src="https://t1.kakaocdn.net/friends/prod/main_tab/feed/npc_20211118084432.jpg" alt="">
-							<span class="open-post__member-count">800 members</span>
-							<div class="divider"></div>
-							<span class="open-post__member-status">Active</span>
-						</div>
-					</div>
-					<div class="open-post__column">
-						<div class="open-post__photo">
-							<img src="https://img1.kakaocdn.net/thumb/R624x0.q82/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Ffriends%2Fprod%2Fmain_tab%2Ffeed%2Fmedia%2Fmedia_0_20211028181537.jpg" alt="">
-							<div class="open-post__heart-count"><i class="fas fa-heart fa-xs"></i> <span>560</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="open-chat">
+        <div class="open-chat__header">
+          <h4 class="open-chat__title">Open Chat</h4>
+          <span
+            >Go to Openchat Home <i class="fas fa-chevron-right fa-xs"></i
+          ></span>
+        </div>
+        <div class="open-post">
+          <div class="open-post__column">
+            <h5 class="open-post__title">#춘식</h5>
+            <h6 class="open-post__hashtage">#춘식#choonsik#라이언❤#고구마❤</h6>
+            <div class="open-post__members">
+              <img
+                src="https://t1.kakaocdn.net/friends/prod/main_tab/feed/npc_20211118084432.jpg"
+                alt=""
+              />
+              <span class="open-post__member-count">800 members</span>
+              <div class="divider"></div>
+              <span class="open-post__member-status">Active</span>
+            </div>
+          </div>
+          <div class="open-post__column">
+            <div class="open-post__photo">
+              <img
+                src="https://img1.kakaocdn.net/thumb/R624x0.q82/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Ffriends%2Fprod%2Fmain_tab%2Ffeed%2Fmedia%2Fmedia_0_20211028181537.jpg"
+                alt=""
+              />
+              <div class="open-post__heart-count">
+                <i class="fas fa-heart fa-xs"></i> <span>560</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <nav class="nav">
@@ -85,12 +105,14 @@
         </li>
 
         <li class="nav__btn">
-          <a class="nav__link" href="find.html"><i class="fas fa-search fa-2x"></i></a>
+          <a class="nav__link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
         </li>
 
         <li class="nav__btn">
-          <a class="nav__link" href="more.html"></a>
-            <span class="nav__notification-more"> </span>
+          <a class="nav__link" href="more.html">
+            <span class="nav__notification-more"></span>
             <i class="fas fa-ellipsis-h fa-2x"></i
           ></a>
         </li>
