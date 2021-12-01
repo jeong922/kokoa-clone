@@ -1,0 +1,90 @@
+#chat-screen {
+  background-color: rgb(172, 201, 218);
+  height: 11000vh;
+}
+
+#chat-screen .alt-header {
+  top: 26px;
+  position: sticky;
+  width: 100%;
+  background-color: rgb(172, 201, 218);
+  box-sizing: border-box;
+  z-index: 1;
+  /* background-color: coral; */
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+  background-color: rgb(172, 201, 218);
+}
+
+.main-chat {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; flex-direction: column; 대신 이렇게 해도 결과는 같음 */
+  align-items: center;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 23px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 15px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--dark-blue);
+  color: white;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
