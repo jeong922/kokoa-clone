@@ -1,6 +1,7 @@
 #chat-screen {
   background-color: rgb(172, 201, 218);
-  height: 11000vh;
+  height: 500vh;
+  -ms-overflow-style: none;
 }
 
 #chat-screen .alt-header {
@@ -18,11 +19,27 @@
   background-color: rgb(172, 201, 218);
 }
 
+#chat-screen::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
   display: flex;
   flex-direction: column;
   /* justify-content: center; flex-direction: column; 대신 이렇게 해도 결과는 같음 */
   align-items: center;
+  animation: fadIn 0.6s linear;
 }
 
 .chat__timestamp {
@@ -88,3 +105,95 @@
 .message-row--own .message__info {
   flex-direction: row-reverse;
 }
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+  transition: transform 0.3 ease-in-out;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border: var(--border-style);
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.reply__column:last-child i {
+  right: 45px;
+  top: 13px;
+}
+
+.reply__column button {
+  background-color: var(--deep-dark-blue);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+  transition: opacity 0.3 ease-in-out;
+}
+
+/* .reply:focus-within : reply 내부에 focus 된 element가 있는지 확인 */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply input:focus {
+  width: 98vw;
+  transform: translateX(-13%);
+}
+
+/* .reply input:focus {
+  width: 98vw;
+  transform: translateX(-13%) translateY(0px);
+} */
+
+/* .reply:focus-within {
+  transform: translateY(80px);
+} */

@@ -100,3 +100,26 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: red;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 2s linear infinite;
+}
+
+/* will-change는 애니메이션이 좀 더 부드럽게 동작하게 해줌. 
+    브라우저에게 어떤것이 변할 것인지 알려줌 → 브라우저가 컴퓨터의 그래픽카드를 이용해서 애니메이션을 가속화 */

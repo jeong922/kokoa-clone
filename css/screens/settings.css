@@ -16,3 +16,22 @@
 .settings__setting-column:last-child {
   opacity: 0.5;
 }
+
+.settings__setting-column #new {
+  margin-left: 5px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  background-color: var(--deep-dark-blue);
+  color: white;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.setting-version {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgb(17, 45, 78, 0.3);
+}
+
+.setting-privacy {
+  margin-top: 30px;
+}
