@@ -1,5 +1,16 @@
 .user-component {
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.user-component-friends {
+  padding: 10px;
+}
+
+.user-component-friends:hover {
+  /* background-color: rgba(252, 236, 204, 0.404); */
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .user-component,
@@ -10,6 +21,13 @@
 
 .user-component-chats {
   margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user-component-chats:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .user-component__avatar {
@@ -22,11 +40,12 @@
 .user-component__title {
   font-weight: 600;
   font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .user-component_subtitle {
   margin-top: 8px;
-  font-size: 17px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
 

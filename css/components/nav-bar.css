@@ -2,10 +2,10 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: var(--blue);
+  background-color: var(--nav-color);
   padding: 20px 50px;
   box-sizing: border-box;
-  border-top: 1px solid rgb(17, 45, 78, 0.3);
+  /* border-top: 1px solid rgb(0, 0, 0, 0.3); */
 }
 
 .nav__list {
@@ -30,6 +30,18 @@
   }
 }
 
+@keyframes notificationMoreAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .nav__notification {
   position: absolute;
   left: 15px;
@@ -38,7 +50,7 @@
 }
 
 .nav__notification-more {
-  background-color: var(--dark-blue);
+  background-color: var(--brown--color);
   width: 6px;
   height: 6px;
   border-radius: 3px;
@@ -48,6 +60,7 @@
   position: absolute;
   left: 35px;
   bottom: 27px;
+  animation: notificationMoreAnimation 3s ease-in-out infinite;
 }
 
 .nav__notification-dot-black {
@@ -62,7 +75,7 @@
 }
 
 .nav__notification-dot-white {
-  background-color: var(--blue);
+  background-color: var(--nav-color);
   width: 14px;
   height: 14px;
   border-radius: 50%;

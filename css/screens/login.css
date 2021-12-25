@@ -46,13 +46,14 @@
 }
 
 #login-form input[type="submit"] {
-  background-color: var(--deep-dark-blue);
+  background-color: var(--coral--color);
   cursor: pointer;
   padding: 20px 0px;
   border-radius: 5px;
 }
 
-#login-form input[value="Log In"] {
+#login-form input[value="Log In"],
+#login-form input[value="Sign In"] {
   color: #fff;
 }
 

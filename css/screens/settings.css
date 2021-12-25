@@ -1,10 +1,15 @@
 .settings__setting {
-  padding: 20px 0;
+  padding: 20px 10px;
   border-bottom: 1px solid rgb(17, 45, 78, 0.1);
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.settings__setting:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .settings__setting i {
@@ -15,20 +20,25 @@
 
 .settings__setting-column:last-child {
   opacity: 0.5;
+  font-size: 16px;
 }
 
 .settings__setting-column #new {
   margin-left: 5px;
   padding: 3px 6px;
   border-radius: 50%;
-  background-color: var(--deep-dark-blue);
+  background-color: var(--brown--color);
   color: white;
   font-size: 8px;
   font-weight: 600;
+  animation: notificationMoreAnimation 1.5s ease-in-out infinite;
 }
 
 .setting-version {
-  padding-bottom: 50px;
+  border-bottom: none;
+}
+
+.setting-space {
   border-bottom: 1px solid rgb(17, 45, 78, 0.3);
 }
 

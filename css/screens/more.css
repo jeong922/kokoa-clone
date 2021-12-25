@@ -3,7 +3,7 @@
 }
 
 .more-suggestions {
-  margin: 30px 0px;
+  margin: 20px 0px;
   border-top: var(--border-style);
   padding-top: 40px;
 }
@@ -13,20 +13,29 @@
 }
 
 .more-suggestions__icons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+  justify-content: center;
 }
 
 .more-suggestions__icon {
-  margin-right: 30px;
+  /* padding: 0px 15px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 15px;
+}
+
+.more-suggestions__icon-text {
+  text-align: center;
 }
 
 .more-suggestions__icon-image {
-  width: 60px;
-  height: 60px;
-  background-color: var(--deep-dark-blue);
+  width: 55px;
+  height: 55px;
+  background-color: var(--coral--color);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -36,9 +45,102 @@
 
 .more-suggestions__icon-image:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .more-suggestions__icon-image i {
   font-size: 30px;
   color: white;
+}
+
+/* ------------------------------------------------- */
+
+.more-weather-icon {
+  display: flex;
+  justify-content: center;
+}
+/*  */
+
+.more-weather-icon-bg {
+  width: 95%;
+  height: 120px;
+  background-color: rgba(253, 228, 174, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+/* 배경색 */
+
+.more-weather-icon-bg span {
+  font-size: 14px;
+  margin: 15px 0px 0px 15px;
+}
+/* 서울 */
+
+@keyframes iconRotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.more-weather-icon-image-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+/* 기온 이미지 div */
+
+.more-weather-icon-image-info-today {
+  display: flex;
+  align-items: center;
+}
+
+.more-weather-icon-image-info-today span {
+  margin: 0;
+  font-size: 35px;
+}
+
+.more-weather-icon-image-info-today-comp {
+  margin-right: 10px;
+  line-height: 1.5;
+}
+.more-weather-icon-image-info-dust span:last-child {
+  color: rgb(0, 119, 255);
+}
+
+.more-weather-icon-image-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  color: rgb(114, 114, 114);
+  animation: iconRotate 6s linear infinite;
+}
+/* 해 이미지 */
+
+.more-music-bg {
+  background-color: rgba(253, 228, 174, 0.2);
+  height: 200px;
+}
+
+.more-music-img img {
+  width: 150px;
+  height: 150px;
+}
+
+@media screen and (max-width: 320px) {
+  .more-weather-icon-image-info-today span {
+    margin: 0;
+    font-size: 30px;
+  }
+  .more-weather-icon-image-info-today-comp span {
+    font-size: 12px;
+  }
+  .more-weather-icon-image-info-dust span {
+    font-size: 12px;
+  }
 }

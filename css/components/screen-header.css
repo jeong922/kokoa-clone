@@ -20,6 +20,24 @@
   cursor: pointer;
 }
 
+.screen-header__icons:last-child {
+  position: relative;
+}
+
+.screen-header__icons-cog {
+  background-color: var(--brown--color);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  animation: notificationMoreAnimation 3s ease-in-out infinite;
+}
+
 @keyframes rotateCog {
   from {
     transform: none;

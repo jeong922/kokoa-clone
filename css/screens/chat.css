@@ -1,5 +1,5 @@
 #chat-screen {
-  background-color: rgb(172, 201, 218);
+  background-color: var(--main-color);
   height: 500vh;
   -ms-overflow-style: none;
 }
@@ -8,7 +8,7 @@
   top: 26px;
   position: sticky;
   width: 100%;
-  background-color: rgb(172, 201, 218);
+  background-color: var(--main-color);
   box-sizing: border-box;
   z-index: 1;
   /* background-color: coral; */
@@ -16,16 +16,38 @@
 
 #chat-screen .status-bar {
   z-index: 2;
-  background-color: rgb(172, 201, 218);
+  background-color: var(--nav-color);
 }
 
 #chat-screen::-webkit-scrollbar {
   display: none;
 }
 
-@keyframes fadIn {
+/* @keyframes fadIn {
   from {
     transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+} */
+
+@keyframes showBubble {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes showBubbleOwn {
+  from {
+    transform: translateX(100px);
     opacity: 0;
   }
   to {
@@ -39,12 +61,12 @@
   flex-direction: column;
   /* justify-content: center; flex-direction: column; 대신 이렇게 해도 결과는 같음 */
   align-items: center;
-  animation: fadIn 0.6s linear;
+  /* animation: fadIn 0.6s linear; */
 }
 
 .chat__timestamp {
   color: white;
-  background-color: #92a4b2;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 12px;
   font-size: 14px;
   border-radius: 23px;
@@ -54,8 +76,61 @@
 .message-row {
   width: 100%;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  /* animation: showBubble 1s ease-in-out forwards; */
+  /* opacity: 0; */
 }
+
+.message-row-ani1,
+.message-row-ani3,
+.message-row-ani3-1,
+.message-row-ani5 {
+  animation: showBubble 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.message-row-ani2,
+.message-row-ani2-1,
+.message-row-ani4,
+.message-row-ani4-1 {
+  animation: showBubbleOwn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.message-row-ani1,
+.message-row-ani2-1 {
+  animation-delay: 1.5s;
+}
+
+.message-row-ani2,
+.message-row-ani3-1 {
+  animation-delay: 3s;
+}
+
+.message-row-ani3,
+.message-row-ani4-1 {
+  animation-delay: 4.5s;
+}
+
+.message-row-ani4,
+.message-row-ani5 {
+  animation-delay: 6s;
+}
+
+/* 왜인지 모르겠지만 이렇게 안하면 순서대로 동작 안함.. */
+
+/* .message-row:first-child {
+  animation-delay: 2s;
+}
+.message-row:nth-child(2) {
+  animation-delay: 2s;
+}
+.message-row:nth-child(3) {
+  animation-delay: 4s;
+}
+.message-row:last-child {
+  animation-delay: 4s;
+} */
 
 .message-row img {
   width: 50px;
@@ -79,6 +154,49 @@
   margin-right: 5px;
 }
 
+.message__bubble a:hover {
+  color: #2f4858;
+}
+
+@keyframes rotateDot {
+  0% {
+    background-color: rgb(255, 255, 255);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.74);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.507);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.74);
+  }
+  100% {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.message__bubble-dot-container {
+  display: flex;
+}
+
+.message__bubble-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 4px;
+  animation: rotateDot 1.5s ease infinite;
+}
+
+.message__bubble-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.message__bubble-dot:last-child {
+  animation-delay: 0.4s;
+}
+
 .message__info {
   display: flex;
   align-items: flex-end;
@@ -91,10 +209,11 @@
 
 .message-row--own {
   justify-content: flex-end;
+  /* animation: showBubbleOwn 1s ease-in-out forwards; */
 }
 
 .message-row--own .message__bubble {
-  background-color: var(--dark-blue);
+  background-color: var(--coral--color);
   color: white;
   border-top-right-radius: 0px;
   border-top-left-radius: 15px;
@@ -104,6 +223,15 @@
 
 .message-row--own .message__info {
   flex-direction: row-reverse;
+}
+
+.message__info img {
+  /* width: 150px;
+  height: 120px; */
+  width: 188px;
+  height: 150px;
+  border-radius: 5px;
+  margin-left: 5px;
 }
 
 .reply {
@@ -154,7 +282,7 @@
 }
 
 .reply__column button {
-  background-color: var(--deep-dark-blue);
+  background-color: var(--coral--color);
   color: white;
   border: none;
   width: 30px;
@@ -185,7 +313,7 @@
 }
 
 .reply input:focus {
-  width: 98vw;
+  width: 97vw;
   transform: translateX(-13%);
 }
 

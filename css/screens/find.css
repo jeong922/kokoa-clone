@@ -29,6 +29,10 @@
   opacity: 0.6;
 }
 
+.open-chat__header span:hover {
+  cursor: pointer;
+}
+
 .open-post {
   display: flex;
   justify-content: space-between;
@@ -76,7 +80,7 @@
 }
 
 .open-post__member-status {
-  color: #b0c5ff;
+  color: var(--coral--color);
 }
 
 .open-post__photo img {

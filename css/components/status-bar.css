@@ -32,3 +32,12 @@
 .status-bar__column .fa-battery-full {
   margin: 0px 5px;
 }
+
+@media screen and (max-width: 320px) {
+  .status-bar__column span {
+    font-size: 14px;
+  }
+  .status-bar__column i {
+    font-size: 14px;
+  }
+}

@@ -4,6 +4,11 @@
   --blue: rgb(219, 226, 239);
   --light-blue: rgb(249, 247, 247);
 
+  --main-color: #fed677;
+  --nav-color: #ffce82;
+  --brown--color: #c0564b;
+  --coral--color: #fd8b7c;
+
   --horizontal-space: 25px;
-  --border-style: 1px solid rgb(17, 45, 78, 0.2);
+  --border-style: 1px solid rgb(0, 0, 0, 0.2);
 }

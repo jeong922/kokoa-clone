@@ -5,7 +5,7 @@
 
 .icon-row {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
   grid-gap: 10px;
   justify-content: center;
@@ -24,14 +24,19 @@
 .icon-row__icon span {
   margin-top: 18px;
   text-align: center;
+  font-size: 15px;
 }
 
 .icon-row__icon:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
-@media screen and (max-width: 480px) {
-  .icon-row {
-    grid-template-columns: repeat(4, 80px);
+@media screen and (max-width: 320px) {
+  .icon-row__icon i {
+    font-size: 25px;
+  }
+  .icon-row__icon span {
+    font-size: 13px;
   }
 }
