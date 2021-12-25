@@ -14,7 +14,7 @@
   height: 90%;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.205);
-  background-image: url("/image/1.png");
+  background-image: url("../image/1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
