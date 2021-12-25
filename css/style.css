@@ -12,6 +12,7 @@
 @import "components/icon-row.css";
 @import "components/alt-screen-header.css";
 @import "components/no-mobile.css";
+@import "components/popup.css";
 
 /* screens */
 @import "screens/login.css";
@@ -32,7 +33,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 1px;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #fd8b7c2c;
