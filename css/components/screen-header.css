@@ -16,10 +16,6 @@
   margin-left: 20px;
 }
 
-.screen-header__icons span:hover {
-  cursor: pointer;
-}
-
 .screen-header__icons:last-child {
   position: relative;
 }

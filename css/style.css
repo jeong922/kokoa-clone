@@ -32,7 +32,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #fd8b7c2c;
@@ -41,4 +41,3 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: none;
 }
-

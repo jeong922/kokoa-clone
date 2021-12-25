@@ -29,10 +29,6 @@
   opacity: 0.6;
 }
 
-.open-chat__header span:hover {
-  cursor: pointer;
-}
-
 .open-post {
   display: flex;
   justify-content: space-between;

@@ -23,10 +23,6 @@
   padding-top: 15px;
 }
 
-.friends-screen__channel:hover {
-  cursor: pointer;
-}
-
 .friends-screen__channel-header {
   margin-bottom: 30px;
   display: flex;

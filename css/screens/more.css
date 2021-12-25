@@ -44,7 +44,6 @@
 }
 
 .more-suggestions__icon-image:hover {
-  cursor: pointer;
   transform: scale(1.1);
 }
 
