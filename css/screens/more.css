@@ -43,7 +43,7 @@
   margin-bottom: 10px;
 }
 
-.more-suggestions__icon-image:hover {
+.more-suggestions__icon:hover {
   transform: scale(1.1);
 }
 
