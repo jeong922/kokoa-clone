@@ -27,6 +27,42 @@
   z-index: 1;
 }
 
+.popup-inner-no {
+  width: 85%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.205);
+  /* background-image: url("../../image/1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: showPopup2 0.75s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.popup-inner-2 {
+  width: 85%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.205);
+  background-image: url("../../image/20211126_피파시즌2_02.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: showPopup2 0.75s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
 .popup-bg {
   background-color: rgba(0, 0, 0, 0.3);
   width: 85%;
@@ -114,6 +150,13 @@
   align-items: center;
   color: white;
   margin-top: 20px;
+}
+
+.poppup-content_icons-icon a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .poppup-content_icons-icon span {
